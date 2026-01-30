@@ -1,0 +1,42 @@
+.topCategories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 1rem;
+  gap: 1.5rem;
+  padding-bottom: 0;
+}
+.topCategories h2 {
+  font-family: var(--gothic);
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.category {
+  border: 1px solid #ffffff07;
+  padding: 1rem;
+}
+.about {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about p {
+  font-weight: 700;
+  font-family: var(--josefin);
+  font-size: 1.25rem;
+}
+.about a {
+  font-family: var(--josefin);
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: var(--red);
+  border-radius: 3px;
+}
+.categoriesGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}

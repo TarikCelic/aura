@@ -1,0 +1,57 @@
+.saleSection h2 {
+  font-family: var(--gothic);
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.saleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.saleGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 350px;
+  grid-auto-rows: 400px;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-bottom: 1rem;
+}
+p.productDesc {
+  color: #ffffffc5;
+  font-family: var(--space);
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+p.productName {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--inter);
+}
+.product a {
+  font-family: var(--space);
+  background-color: var(--red);
+  margin-top: 1.5rem;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  border-radius: 0.25rem;
+  justify-content: center;
+}
+.arrows {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 0.5rem;
+}
