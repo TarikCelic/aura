@@ -3,6 +3,10 @@ import products from '../../data/products';
 import FilterSidebar from '../../components/FilterSidebar/FilterSidebar';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import style from './Category.module.css';
+
+import sort from '../../assets/icons/sort.svg';
+import filter from '../../assets/icons/filter.svg';
+
 export default function CategoryPage() {
   const { category } = useParams();
   const [searchParams] = useSearchParams();
@@ -21,6 +25,16 @@ export default function CategoryPage() {
   return (
     <main>
       <h1>{category.toUpperCase()}</h1>
+      <div className={style.filterBox}>
+        <div>
+          <img src={sort} width={30} alt="" />
+          Sort
+        </div>
+        <div>
+          Filter
+          <img src={filter} width={30} alt="" />
+        </div>
+      </div>
       <div className={style.productGrid}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (

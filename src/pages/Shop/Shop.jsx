@@ -6,6 +6,7 @@ import laptop from '../../assets/images/catLaptop.png';
 import phone from '../../assets/images/catPhone.png';
 import sWatch from '../../assets/images/catSmartWatch.png';
 import tv from '../../assets/images/catTelevision.png';
+import componenta from '../../assets/images/products/IntelCoreI7.png';
 export default function Shop() {
   return (
     <HeadingGrid
@@ -13,29 +14,33 @@ export default function Shop() {
       sectionIntroduce="Pronadite svoju kategoriju"
     >
       <>
-        <Link to="/shop/gaming-racunari" className={style.gridItem}>
-          <img src={gamingPC} alt="" />
+        <Link to="/shop/desktop" className={style.gridItem}>
+          <img src={gamingPC} width={360} alt="" />
           <p>Gaming Racunari</p>
         </Link>
 
         <Link to="/shop/laptopi" className={style.gridItem}>
-          <img src={laptop} alt="" />
+          <img src={laptop} width={360} alt="" />
           <p>Laptopi</p>
         </Link>
 
-        <Link to="/shop/telefoni" className={style.gridItem}>
-          <img src={phone} alt="" />
+        <Link to="/shop/phone" className={style.gridItem}>
+          <img src={phone} width={360} alt="" />
           <p>Telefoni</p>
         </Link>
 
         <Link to="/shop/pametni-satovi" className={style.gridItem}>
-          <img src={sWatch} alt="" />
+          <img src={sWatch} width={360} alt="" />
           <p>Pametni Satovi</p>
         </Link>
 
-        <Link to="/shop/televizori" className={style.gridItem}>
-          <img src={tv} alt="" />
+        <Link to="/shop/tv" className={style.gridItem}>
+          <img src={tv} width={360} alt="" />
           <p>Televizori</p>
+        </Link>
+        <Link to="/shop/components" className={style.gridItem}>
+          <img src={componenta} width={360} alt="" />
+          <p>Racunarske Komponente</p>
         </Link>
       </>
     </HeadingGrid>
