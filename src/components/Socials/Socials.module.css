@@ -1,0 +1,22 @@
+.socialLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+.socialLinks a {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  transition: border 0.2s ease-in;
+}
+svg {
+  transition: fill 0.2s ease-in;
+}
+.socialLinks a:hover svg {
+  fill: var(--red);
+}
+.socialLinks a:hover {
+  border-color: var(--red);
+}

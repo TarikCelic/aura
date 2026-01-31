@@ -1,0 +1,16 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+main h1 {
+  color: var(--red);
+}

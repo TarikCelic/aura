@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&display=swap");
 
 :root {
   --black: #101010;
   --white: #faf9f6;
   --red: #f03434;
-  --inter: 'Inter', Segoe UI, sans-serif;
-  --josefin: 'Josefin Sans', Segoe UI, sans-serif;
-  --gothic: 'Special Gothic Expanded One', Segoe UI, sans-serif;
-  --space: 'Space Grotesk', Segoe UI, sans-serif;
+  --inter: "Inter", Segoe UI, sans-serif;
+  --josefin: "Josefin Sans", Segoe UI, sans-serif;
+  --gothic: "Special Gothic Expanded One", Segoe UI, sans-serif;
+  --space: "Space Grotesk", Segoe UI, sans-serif;
 }
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   scrollbar-width: thin;

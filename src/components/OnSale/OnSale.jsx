@@ -5,6 +5,8 @@ import { useRef } from 'react';
 import leftIcon from '../../assets/icons/left-arrow.svg';
 import rightIcon from '../../assets/icons/right-arrow.svg';
 
+import cart from '../../assets/icons/cart.svg';
+
 export default function OnSale() {
   const scrollRef = useRef(null);
 
@@ -20,7 +22,10 @@ export default function OnSale() {
 
   return (
     <section className={style.saleSection}>
-      <h2>ON SALE</h2>
+      <div className={style.sectionHeader}>
+        <h2>ON SALE</h2>
+        <p>Ne propusti priliku</p>
+      </div>
       <div className={style.arrows}>
         <div className={style.leftArrow} onClick={() => scroll(-365)}>
           <img src={leftIcon} width={40} alt="Left" />
@@ -38,6 +43,19 @@ export default function OnSale() {
             <p className={style.productDesc}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
+            <div className={style.priceCart}>
+              <div className={style.price}>
+                <p>
+                  <span className="firstPrice">399</span>€
+                </p>
+                <p>
+                  <span className="discountedPrice">240</span>€
+                </p>
+              </div>
+              <div className={style.cart}>
+                <img src={cart} width={30} alt="" />
+              </div>
+            </div>
             <Link to={'#'}>See The Product</Link>
           </div>
         ))}
