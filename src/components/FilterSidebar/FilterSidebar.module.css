@@ -22,7 +22,7 @@ h3 {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .filterOption {
   width: 100%;
@@ -39,7 +39,8 @@ h3 {
   outline-offset: 3px;
   border-radius: 0.5rem;
   border: none;
-  min-width: 6rem;
+  min-width: 7rem;
+  max-width: 7rem;
 }
 .filterOption option {
   color: var(--white);
@@ -60,4 +61,19 @@ label {
   font-size: 1.2rem;
   border-radius: 100px;
   margin-top: 1rem;
+}
+.prices {
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.prices input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--red);
+  color: var(--white);
+  border-radius: 0.5rem;
 }

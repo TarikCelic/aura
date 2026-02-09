@@ -1,45 +1,45 @@
-import { useSearchParams } from "react-router-dom";
-import style from "./FilterSidebar.module.css";
-import leaveFilter from "../../assets/icons/x.svg";
-import { desktopFilters } from "../../data/filterUtils";
+import { useSearchParams } from 'react-router-dom';
+import style from './FilterSidebar.module.css';
+import leaveFilter from '../../assets/icons/x.svg';
+import { desktopFilters } from '../../data/filterUtils';
 const filterOptions = [
   {
-    oblast: "desktop",
+    oblast: 'desktop',
     filteri: [
       {
-        choosen: "ram",
-        labelF: "RAM Memorija",
+        choosen: 'ram',
+        labelF: 'RAM Memorija',
         opcije: desktopFilters.ramMemorije,
       },
       {
-        choosen: "cpu",
-        labelF: "Procesor",
+        choosen: 'cpu',
+        labelF: 'Procesor',
         opcije: desktopFilters.procesori,
       },
       {
-        choosen: "gpu",
-        labelF: "Graficka",
+        choosen: 'gpu',
+        labelF: 'Graficka',
         opcije: desktopFilters.graficke,
       },
       {
-        choosen: "storage",
-        labelF: "Memorija",
+        choosen: 'storage',
+        labelF: 'Memorija',
         opcije: desktopFilters.storage,
       },
       {
-        choosen: "mb",
-        labelF: "Maticna",
+        choosen: 'mb',
+        labelF: 'Maticna',
         opcije: desktopFilters.maticne,
       },
       {
-        choosen: "sys",
-        labelF: "Sistem",
+        choosen: 'sys',
+        labelF: 'Sistem',
         opcije: desktopFilters.sistem,
       },
     ],
   },
   {
-    oblast: "monitori",
+    oblast: 'monitori',
     filteri: [],
   },
 ];
@@ -53,9 +53,10 @@ const FilterOption = ({
 }) => {
   return (
     <div className={style.filterOption}>
-      <label>{labelF}:</label>
+      <label htmlFor={labelF}>{labelF}:</label>
       <select
-        value={currentVal || ""}
+        id={labelF}
+        value={currentVal || ''}
         onChange={(e) => onFilterChange(choosen, e.target.value)}
       >
         <option value="">Sve</option>
@@ -95,21 +96,41 @@ export default function FilterSidebar({ activeCategory, onClose }) {
           width={30}
           alt="Zatvori"
           onClick={onClose}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
         />
       </div>
 
       {currentCategoryData ? (
-        currentCategoryData.filteri.map((filter) => (
-          <FilterOption
-            key={filter.choosen}
-            labelF={filter.labelF}
-            choosen={filter.choosen}
-            options={filter.opcije}
-            currentVal={searchParams.get(filter.choosen)}
-            onFilterChange={handleFilterChange}
-          />
-        ))
+        <>
+          <div className={style.prices}>
+            <input
+              value={searchParams.get('minPrice') || ''}
+              type="number"
+              placeholder="Minimalna Cijena"
+              onChange={(e) => {
+                handleFilterChange('minPrice', e.target.value);
+              }}
+            />
+            <input
+              value={searchParams.get('maxPrice') || ''}
+              type="number"
+              placeholder="Maksimalna Cijena"
+              onChange={(e) => {
+                handleFilterChange('maxPrice', e.target.value);
+              }}
+            />
+          </div>
+          {currentCategoryData.filteri.map((filter) => (
+            <FilterOption
+              key={filter.choosen}
+              labelF={filter.labelF}
+              choosen={filter.choosen}
+              options={filter.opcije}
+              currentVal={searchParams.get(filter.choosen)}
+              onFilterChange={handleFilterChange}
+            />
+          ))}
+        </>
       ) : (
         <p>Nema filtera za ovu kategoriju.</p>
       )}
