@@ -1,0 +1,97 @@
+.saleSection h2 {
+  font-family: var(--gothic);
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.saleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.saleGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 350px;
+  grid-auto-rows: 470px;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-bottom: 1rem;
+}
+p.productDesc {
+  color: #ffffffc5;
+  font-family: var(--space);
+  font-size: 1rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #515151;
+  padding: 1.5rem;
+}
+p.productName {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--inter);
+  font-weight: 500;
+}
+.product a {
+  font-family: var(--space);
+  background-color: var(--red);
+  margin-top: 1.5rem;
+  text-transform: capitalize;
+  font-size: 1.15rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  border-radius: 0.25rem;
+  justify-content: center;
+}
+.arrows {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 0.5rem;
+}
+.priceCart {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.price p {
+  font-size: 1.5rem;
+}
+.price p:nth-child(1) {
+  text-decoration: line-through;
+  color: #b5b5b5;
+  font-size: 1.15rem;
+}
+.price p:nth-child(2) {
+  font-weight: 800;
+  color: #ff5454;
+}
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--red);
+}
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionHeader p {
+  color: var(--red);
+  font-family: var(--josefin);
+}

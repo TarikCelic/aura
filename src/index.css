@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&family=Special+Gothic+Expanded+One&display=swap");
+
+:root {
+  --black: #101010;
+  --white: #faf9f6;
+  --red: #f03434;
+  --inter: "Inter", Segoe UI, sans-serif;
+  --josefin: "Josefin Sans", Segoe UI, sans-serif;
+  --gothic: "Special Gothic Expanded One", Segoe UI, sans-serif;
+  --space: "Space Grotesk", Segoe UI, sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #161616 #0f0f0f;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--inter);
+  color: var(--white);
+  background-color: var(--black);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  width: clamp(130px, 27vw, 150px);
+}
+#root {
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 20px;
+  border: 2px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red, #ff0000);
+}

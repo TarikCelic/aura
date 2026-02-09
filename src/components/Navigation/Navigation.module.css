@@ -1,0 +1,125 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: #000000d2;
+  backdrop-filter: blur(3px);
+}
+a {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-family: var(--gothic);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+
+.hambi {
+  height: 15px;
+  width: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.hambiUp,
+.hambiDown {
+  width: 100%;
+  background-color: var(--white);
+  height: 1px;
+  transition: transform 0.2s ease-in;
+}
+.hambiUp {
+  transform-origin: top left;
+}
+.hambiDown {
+  transform-origin: bottom left;
+}
+.hambiUp.active {
+  transform: rotate(45deg) translateY(-8px);
+}
+
+.hambiDown.active {
+  transform: rotate(-45deg) translateY(8px);
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  min-height: 100dvh;
+  top: 0;
+  left: 0;
+  background-color: #000000d2;
+  backdrop-filter: blur(3px);
+  z-index: 99;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+.backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 5rem 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.backdrop.active .socials {
+  display: flex;
+  flex-direction: column;
+  animation: fadeLeft 0.2s ease-in forwards;
+}
+.links a:hover {
+  gap: 20px;
+}
+.backdrop.active .navigationLink {
+  opacity: 0;
+  transform: translateX(-30px);
+  visibility: hidden;
+
+  animation: fadeLeft 0.2s ease-in forwards;
+}
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+.backdrop.active .navigationLink:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.backdrop.active .navigationLink:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.backdrop.active .navigationLink:nth-child(3) {
+  animation-delay: 0.3s;
+}

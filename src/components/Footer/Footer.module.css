@@ -1,0 +1,45 @@
+footer a {
+  font-family: var(--space);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+footer img {
+  width: 10rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+footer a {
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+footer ul {
+  list-style: none;
+}
+.upperFooter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+footer p {
+  color: var(--red);
+  font-family: var(--gothic);
+}
+.copyright {
+  color: var(--white);
+  font-size: 0.9rem;
+  font-family: var(--inter);
+  display: inline-block;
+}
+.column {
+  margin-top: 2rem;
+}
+.lowerFooter {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}

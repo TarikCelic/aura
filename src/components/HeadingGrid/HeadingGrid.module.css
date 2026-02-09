@@ -1,0 +1,24 @@
+.hgSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.hgSection h1 {
+  text-transform: uppercase;
+  font-family: var(--gothic);
+  text-align: center;
+  font-size: 1.75rem;
+}
+p.hgIntroduction {
+  color: var(--red);
+  font-family: var(--space);
+  margin-bottom: 2rem;
+}
+.hgGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
