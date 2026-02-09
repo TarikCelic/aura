@@ -662,7 +662,7 @@ const products = [
     tags: ["liquid-cooling", "quiet", "rgb"],
   },
 
-  // DESKTOP RAČUNARI (PREBUILT)
+  // gejmings
   {
     id: 25,
     name: "Gaming PC - RTX 4070 Ti Super Build",
