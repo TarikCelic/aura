@@ -1,85 +1,140 @@
-import { useSearchParams } from "react-router-dom";
-import style from "./FilterSidebar.module.css";
-import leaveFilter from "../../assets/icons/x.svg";
-import { desktopFilters, laptopFilters } from "../../data/filterUtils";
+import { useSearchParams } from 'react-router-dom';
+import style from './FilterSidebar.module.css';
+import leaveFilter from '../../assets/icons/x.svg';
+import {
+  desktopFilters,
+  laptopFilters,
+  mobileFilters,
+} from '../../data/filterUtils';
 const filterOptions = [
   {
-    oblast: "desktop",
+    oblast: 'desktop',
     filteri: [
       {
-        choosen: "ram",
-        labelF: "RAM Memorija",
+        choosen: 'ram',
+        labelF: 'RAM Memorija',
         opcije: desktopFilters.ramMemorije,
       },
       {
-        choosen: "cpu",
-        labelF: "Procesor",
+        choosen: 'cpu',
+        labelF: 'Procesor',
         opcije: desktopFilters.procesori,
       },
       {
-        choosen: "gpu",
-        labelF: "Graficka",
+        choosen: 'gpu',
+        labelF: 'Graficka',
         opcije: desktopFilters.graficke,
       },
       {
-        choosen: "storage",
-        labelF: "Memorija",
+        choosen: 'storage',
+        labelF: 'Memorija',
         opcije: desktopFilters.storage,
       },
       {
-        choosen: "mb",
-        labelF: "Maticna",
+        choosen: 'mb',
+        labelF: 'Maticna',
         opcije: desktopFilters.maticne,
       },
       {
-        choosen: "sys",
-        labelF: "Sistem",
+        choosen: 'sys',
+        labelF: 'Sistem',
         opcije: desktopFilters.sistem,
       },
     ],
   },
   {
-    oblast: "laptopi",
+    oblast: 'laptopi',
     filteri: [
       {
-        choosen: "ram",
-        labelF: "RAM Memorija",
+        choosen: 'ram',
+        labelF: 'RAM Memorija',
         opcije: laptopFilters.ramMemorije,
       },
       {
-        choosen: "cpu",
-        labelF: "Procesor",
+        choosen: 'cpu',
+        labelF: 'Procesor',
         opcije: laptopFilters.procesori,
       },
       {
-        choosen: "gpu",
-        labelF: "Graficka",
+        choosen: 'gpu',
+        labelF: 'Graficka',
         opcije: laptopFilters.graficke,
       },
       {
-        choosen: "storage",
-        labelF: "Memorija",
+        choosen: 'storage',
+        labelF: 'Memorija',
         opcije: laptopFilters.storage,
       },
       {
-        choosen: "mb",
-        labelF: "Maticna",
+        choosen: 'mb',
+        labelF: 'Maticna',
         opcije: laptopFilters.maticne,
       },
       {
-        choosen: "sys",
-        labelF: "Sistem",
+        choosen: 'sys',
+        labelF: 'Sistem',
         opcije: laptopFilters.sistem,
       },
       {
-        choosen: "brand",
-        labelF: "Brand",
+        choosen: 'brand',
+        labelF: 'Brand',
         opcije: laptopFilters.brand,
       },
       {
-        choosen: "battery",
-        labelF: "Baterija",
+        choosen: 'battery',
+        labelF: 'Baterija',
         opcije: laptopFilters.baterija,
+      },
+    ],
+  },
+  {
+    oblast: 'phone',
+    filteri: [
+      {
+        choosen: 'ram',
+        labelF: 'RAM Memorija',
+        opcije: mobileFilters.ramMemorije,
+      },
+      {
+        choosen: 'cpu',
+        labelF: 'Procesor',
+        opcije: mobileFilters.procesori,
+      },
+      {
+        choosen: 'storage',
+        labelF: 'Memorija',
+        opcije: mobileFilters.storage,
+      },
+      {
+        choosen: 'sys',
+        labelF: 'Sistem',
+        opcije: mobileFilters.sistem,
+      },
+      {
+        choosen: 'brand',
+        labelF: 'Brand',
+        opcije: mobileFilters.mobileBRAND,
+      },
+      {
+        choosen: 'battery',
+        labelF: 'Baterija',
+        opcije: mobileFilters.mobileBATTERY,
+      },
+
+      {
+        choosen: 'display',
+        labelF: 'Velicina ekrana',
+        opcije: mobileFilters.mobileDispaly,
+      },
+      {
+        choosen: 'display-type',
+        labelF: 'Vrsta ekrana',
+        opcije: mobileFilters.mobileDType,
+      },
+      {
+        choosen: 'refresh-rate',
+        labelF: 'Brzina osvjezavanja',
+        opcije: mobileFilters.mobileRR,
       },
     ],
   },
@@ -97,7 +152,7 @@ const FilterOption = ({
       <label htmlFor={labelF}>{labelF}:</label>
       <select
         id={labelF}
-        value={currentVal || ""}
+        value={currentVal || ''}
         onChange={(e) => onFilterChange(choosen, e.target.value)}
       >
         <option value="">Sve</option>
@@ -137,7 +192,7 @@ export default function FilterSidebar({ activeCategory, onClose }) {
           width={30}
           alt="Zatvori"
           onClick={onClose}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
         />
       </div>
 
@@ -145,19 +200,19 @@ export default function FilterSidebar({ activeCategory, onClose }) {
         <>
           <div className={style.prices}>
             <input
-              value={searchParams.get("minPrice") || ""}
+              value={searchParams.get('minPrice') || ''}
               type="number"
               placeholder="Minimalna Cijena"
               onChange={(e) => {
-                handleFilterChange("minPrice", e.target.value);
+                handleFilterChange('minPrice', e.target.value);
               }}
             />
             <input
-              value={searchParams.get("maxPrice") || ""}
+              value={searchParams.get('maxPrice') || ''}
               type="number"
               placeholder="Maksimalna Cijena"
               onChange={(e) => {
-                handleFilterChange("maxPrice", e.target.value);
+                handleFilterChange('maxPrice', e.target.value);
               }}
             />
           </div>
