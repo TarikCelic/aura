@@ -1,33 +1,51 @@
 import products from "./products";
 
-const racunari = products.filter((e) => e.category === "desktop");
+const laptopi = products.filter((e) => e.category === "laptopi");
 
-const ramMemorije = [...new Set(racunari.map((e) => e.specs.ram))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
-const procesori = [...new Set(racunari.map((e) => e.specs.procesori))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
-const graficke = [...new Set(racunari.map((e) => e.specs.graficke))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
-const storage = [...new Set(racunari.map((e) => e.specs.storage))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
+function takeSpec(type, specc) {
+  const typee = products.filter((e) => e.category === type);
+  return [...new Set(typee.map((e) => e.specs[specc]))]
+    .sort((a, b) => a.localeCompare(b))
+    .map((value) => ({ vrijednost: value, fName: value }));
+}
+function takeProp(type, specc) {
+  const typee = products.filter((e) => e.category === type);
+  return [...new Set(typee.map((e) => e[specc]))]
+    .sort((a, b) => a.localeCompare(b))
+    .map((value) => ({ vrijednost: value, fName: value }));
+}
+const pcRAM = takeSpec("desktop", "ram");
+const pcCPU = takeSpec("desktop", "procesori");
+const pcGPU = takeSpec("desktop", "graficke");
+const pcSTORAGE = takeSpec("desktop", "storage");
+const pcMB = takeSpec("desktop", "maticne");
+const pcOS = takeSpec("desktop", "os");
 
-const maticne = [...new Set(racunari.map((e) => e.specs.maticne))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
-
-const sistem = [...new Set(racunari.map((e) => e.specs.os))]
-  .sort((a, b) => a.localeCompare(b))
-  .map((value) => ({ vrijednost: value, fName: value }));
+const laptopRAM = takeSpec("laptopi", "ram");
+const laptopCPU = takeSpec("laptopi", "procesori");
+const laptopGPU = takeSpec("laptopi", "graficke");
+const laptopSTORAGE = takeSpec("laptopi", "storage");
+const laptopMB = takeSpec("laptopi", "maticne");
+const laptopOS = takeSpec("laptopi", "os");
+const laptopBATTERY = takeSpec("laptopi", "battery");
+const laptopBRAND = takeProp("laptopi", "brand");
 
 export const desktopFilters = {
-  ramMemorije: [...ramMemorije],
-  graficke: [...graficke],
-  procesori: [...procesori],
-  storage: [...storage],
-  sistem: [...sistem],
-  maticne: [...maticne],
+  ramMemorije: [...pcRAM],
+  graficke: [...pcGPU],
+  procesori: [...pcCPU],
+  storage: [...pcSTORAGE],
+  sistem: [...pcOS],
+  maticne: [...pcMB],
+};
+
+export const laptopFilters = {
+  ramMemorije: [...laptopRAM],
+  graficke: [...laptopCPU],
+  procesori: [...laptopGPU],
+  storage: [...laptopSTORAGE],
+  sistem: [...laptopOS],
+  maticne: [...laptopMB],
+  baterija: [...laptopBATTERY],
+  brand: [...laptopBRAND],
 };

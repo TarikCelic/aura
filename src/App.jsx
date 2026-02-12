@@ -1,11 +1,11 @@
-import Navigation from './components/Navigation/Navigation';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './pages/Home/Home';
-import Shop from './pages/Shop/Shop';
-import Footer from './components/Footer/Footer';
-import Category from './pages/Category/Category';
-import PCComponents from './pages/PCComponents/PCComponents';
+import Navigation from "./components/Navigation/Navigation";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
+import Footer from "./components/Footer/Footer";
+import Category from "./pages/Category/Category";
+import PCComponents from "./pages/PCComponents/PCComponents";
 function App() {
   return (
     <>
