@@ -23,8 +23,31 @@ export default function CategoryPage() {
   const maxPrice = searchParams.get("maxPrice");
   const batteryFilter = searchParams.get("battery");
   const brandFilter = searchParams.get("brand");
+  const displayFilter = searchParams.get("display");
+  const displayTypeFilter = searchParams.get("displayType");
+  const displayRefreshRate = searchParams.get("refresh-rate");
+
+  const resolutionFilter = searchParams.get("resolution");
+  const panelFilter = searchParams.get("panel");
+  const sizeFilter = searchParams.get("size");
 
   const filteredProducts = products.filter((p) => {
+    const matchesResolution = resolutionFilter
+      ? p.specs.resolution === resolutionFilter
+      : true;
+    const matchesPanel = panelFilter ? p.specs.panel === panelFilter : true;
+    const matchesSize = sizeFilter ? p.specs.size === sizeFilter : true;
+
+    const matchesDisplay = displayFilter
+      ? p.specs.display === displayFilter
+      : true;
+    const matchesDType = displayTypeFilter
+      ? p.specs.displayType === displayTypeFilter
+      : true;
+    const matchesRRate = displayRefreshRate
+      ? p.specs.refreshRate === displayRefreshRate
+      : true;
+
     const isCorrectCategory = p.category === category;
     const matchesRam = ramFilter ? p.specs.ram === ramFilter : true;
     const matchesCPU = cpuFilter ? p.specs.procesori === cpuFilter : true;
@@ -52,7 +75,13 @@ export default function CategoryPage() {
       matchesOS &&
       matchesPrice2 &&
       matchesBattery &&
-      matchesBrand
+      matchesBrand &&
+      matchesRRate &&
+      matchesDType &&
+      matchesDisplay &&
+      matchesResolution &&
+      matchesSize &&
+      matchesPanel
     );
   });
 

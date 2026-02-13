@@ -1,5 +1,5 @@
-import style from './ProductCard.module.css';
-import cart from '../../assets/icons/cart.svg';
+import style from "./ProductCard.module.css";
+import cart from "../../assets/icons/cart.svg";
 export default function ProductCard({ product }) {
   return (
     <div className={style.product}>
@@ -8,10 +8,24 @@ export default function ProductCard({ product }) {
       <p>{product.shortDesc}</p>
       <div className={style.priceCart}>
         <div className={style.price}>
-          <p>
-            <span className={style.productPrice}>{product.price}</span>{' '}
-            {product.currency}
-          </p>
+          {!product.onSale && (
+            <p>
+              <span className={style.productPrice}>{product.price}</span>{" "}
+              {product.currency}
+            </p>
+          )}
+
+          {product.onSale && (
+            <>
+              <p>
+                <span className={style.ogPrice}>{product.price}</span>
+              </p>
+              <p>
+                <span className={style.productPrice}>{product.salePrice}</span>{" "}
+                {product.currency}
+              </p>
+            </>
+          )}
         </div>
         <div className={style.cart}>
           <img src={cart} width={23} alt="" />

@@ -1,7 +1,13 @@
 import { useSearchParams } from "react-router-dom";
 import style from "./FilterSidebar.module.css";
 import leaveFilter from "../../assets/icons/x.svg";
-import { desktopFilters, laptopFilters } from "../../data/filterUtils";
+import {
+  desktopFilters,
+  gpuFilters,
+  laptopFilters,
+  mobileFilters,
+  tvFilters,
+} from "../../data/filterUtils";
 const filterOptions = [
   {
     oblast: "desktop",
@@ -75,6 +81,103 @@ const filterOptions = [
         choosen: "battery",
         labelF: "Baterija",
         opcije: laptopFilters.baterija,
+      },
+    ],
+  },
+  {
+    oblast: "phone",
+    filteri: [
+      {
+        choosen: "ram",
+        labelF: "RAM Memorija",
+        opcije: mobileFilters.ramMemorije,
+      },
+      {
+        choosen: "cpu",
+        labelF: "Procesor",
+        opcije: mobileFilters.procesori,
+      },
+      {
+        choosen: "storage",
+        labelF: "Memorija",
+        opcije: mobileFilters.storage,
+      },
+      {
+        choosen: "sys",
+        labelF: "Sistem",
+        opcije: mobileFilters.sistem,
+      },
+      {
+        choosen: "brand",
+        labelF: "Brand",
+        opcije: mobileFilters.mobileBRAND,
+      },
+      {
+        choosen: "battery",
+        labelF: "Baterija",
+        opcije: mobileFilters.mobileBATTERY,
+      },
+
+      {
+        choosen: "display",
+        labelF: "Velicina ekrana",
+        opcije: mobileFilters.mobileDispaly,
+      },
+      {
+        choosen: "displayType",
+        labelF: "Vrsta ekrana",
+        opcije: mobileFilters.mobileDType,
+      },
+      {
+        choosen: "refresh-rate",
+        labelF: "Brzina osvjezavanja",
+        opcije: mobileFilters.mobileRR,
+      },
+    ],
+  },
+  {
+    oblast: "tv",
+    filteri: [
+      {
+        choosen: "brand",
+        labelF: "Brand",
+        opcije: tvFilters.tvBrand,
+      },
+      {
+        choosen: "size",
+        labelF: "Velicina ekrana",
+        opcije: tvFilters.tvSize,
+      },
+      {
+        choosen: "resolution",
+        labelF: "Rezolucija",
+        opcije: tvFilters.tvResolution,
+      },
+      {
+        choosen: "panel",
+        labelF: "Panel",
+        opcije: tvFilters.tvPanel,
+      },
+      {
+        choosen: "refresh-rate",
+        labelF: "Brzina osvjezavanja",
+        opcije: tvFilters.tvRRate,
+      },
+    ],
+  },
+
+  {
+    oblast: "graficke",
+    filteri: [
+      {
+        choosen: "brand",
+        labelF: "Brand",
+        opcije: gpuFilters.gpuBrand,
+      },
+      {
+        choosen: "ram",
+        labelF: "Memorija",
+        opcije: gpuFilters.gpuMemory,
       },
     ],
   },

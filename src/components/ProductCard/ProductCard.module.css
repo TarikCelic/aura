@@ -7,8 +7,6 @@
   font-size: 1.35rem;
   font-family: var(--inter) !important;
   color: var(--red);
-}
-.price p:nth-child(1) {
   font-weight: 800;
 }
 .productPrice {
@@ -28,8 +26,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #444444;
+  border: 1px solid #202020;
   border-radius: 7px;
+  background: #380707;
+  background: linear-gradient(
+    0deg,
+    rgba(56, 7, 7, 1) 0%,
+    rgba(16, 16, 16, 1) 25%
+  );
 }
 .product h3 {
   font-family: var(--inter);
@@ -40,4 +44,14 @@
 
 .product p {
   font-family: var(--space);
+}
+.price {
+  display: flex;
+  flex-direction: column;
+}
+.ogPrice {
+  color: #454545;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  font-weight: 400;
 }

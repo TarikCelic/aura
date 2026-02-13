@@ -30,6 +30,50 @@ const laptopOS = takeSpec("laptopi", "os");
 const laptopBATTERY = takeSpec("laptopi", "battery");
 const laptopBRAND = takeProp("laptopi", "brand");
 
+const mobileRAM = takeSpec("phone", "ram");
+const mobileDispaly = takeSpec("phone", "display");
+const mobileCPU = takeSpec("phone", "procesori");
+const mobileDType = takeSpec("phone", "displayType");
+const mobileSTORAGE = takeSpec("phone", "storage");
+const mobileRR = takeSpec("phone", "refreshRate");
+const mobileOS = takeSpec("phone", "os");
+const mobileBATTERY = takeSpec("phone", "battery");
+const mobileBRAND = takeProp("phone", "brand");
+
+const gpuMemory = takeSpec("graficke", "ram");
+const gpuBrand = takeProp("graficke", "brand");
+
+const tvSize = takeSpec("tv", "size");
+const tvResolution = takeSpec("tv", "resolution");
+const tvPanel = takeSpec("tv", "panel");
+const tvRRate = takeSpec("tv", "refreshRate");
+const tvBrand = takeProp("tv", "brand");
+
+export const gpuFilters = {
+  gpuMemory: [...gpuMemory],
+  gpuBrand: [...gpuBrand],
+};
+
+export const tvFilters = {
+  tvBrand: [...tvBrand],
+  tvSize: [...tvSize],
+  tvResolution: [...tvResolution],
+  tvPanel: [...tvPanel],
+  tvRRate: [...tvRRate],
+};
+
+export const mobileFilters = {
+  ramMemorije: [...mobileRAM],
+  procesori: [...mobileCPU],
+  storage: [...mobileSTORAGE],
+  sistem: [...mobileOS],
+  mobileBATTERY: [...mobileBATTERY],
+  mobileBRAND: [...mobileBRAND],
+  mobileDispaly: [...mobileDispaly],
+  mobileDType: [...mobileDType],
+  mobileRR: [...mobileRR],
+};
+
 export const desktopFilters = {
   ramMemorije: [...pcRAM],
   graficke: [...pcGPU],

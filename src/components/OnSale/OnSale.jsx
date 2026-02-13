@@ -1,11 +1,12 @@
-import style from './OnSale.module.css';
-import dLaptop from '../../assets/images/3d-laptop.png';
-import { Link } from 'react-router-dom';
-import { useRef } from 'react';
-import leftIcon from '../../assets/icons/left-arrow.svg';
-import rightIcon from '../../assets/icons/right-arrow.svg';
+import style from "./OnSale.module.css";
+import dLaptop from "../../assets/images/3d-laptop.png";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+import leftIcon from "../../assets/icons/left-arrow.svg";
+import rightIcon from "../../assets/icons/right-arrow.svg";
 
-import cart from '../../assets/icons/cart.svg';
+import cart from "../../assets/icons/cart.svg";
+import products from "../../data/products";
 
 export default function OnSale() {
   const scrollRef = useRef(null);
@@ -15,10 +16,12 @@ export default function OnSale() {
       scrollRef.current.scrollBy({
         top: 0,
         left: offset,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
+
+  const izdvojeni = products.filter((e) => e.onSale === true);
 
   return (
     <section className={style.saleSection}>
@@ -36,27 +39,25 @@ export default function OnSale() {
       </div>
 
       <div className={style.saleGrid} ref={scrollRef}>
-        {[1, 2, 3, 4, 5].map((item) => (
+        {izdvojeni.map((item) => (
           <div key={item} className={style.product}>
-            <img src={dLaptop} alt="" />
-            <p className={style.productName}>Laptop {item}</p>
-            <p className={style.productDesc}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            <img src={item.image} alt="" />
+            <p className={style.productName}>{item.name}</p>
+            <p className={style.productDesc}>{item.shortDesc}</p>
             <div className={style.priceCart}>
               <div className={style.price}>
                 <p>
-                  <span className="firstPrice">399</span>€
+                  <span className="firstPrice">{item.price}</span>KM
                 </p>
                 <p>
-                  <span className="discountedPrice">240</span>€
+                  <span className="discountedPrice">{item.salePrice}</span>KM
                 </p>
               </div>
               <div className={style.cart}>
                 <img src={cart} width={30} alt="" />
               </div>
             </div>
-            <Link to={'#'}>See The Product</Link>
+            <Link to={"#"}>See The Product</Link>
           </div>
         ))}
       </div>
