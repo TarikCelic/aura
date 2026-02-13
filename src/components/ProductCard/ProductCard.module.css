@@ -2,6 +2,7 @@
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .price p {
   font-size: 1.35rem;
@@ -17,8 +18,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background-color: var(--red);
 }
 .product {
@@ -28,12 +29,13 @@
   justify-content: center;
   border: 1px solid #202020;
   border-radius: 7px;
-  background: #380707;
+  background: #400909;
   background: linear-gradient(
     0deg,
-    rgba(56, 7, 7, 1) 0%,
-    rgba(16, 16, 16, 1) 25%
+    rgba(64, 9, 9, 1) 0%,
+    rgba(54, 44, 31, 0) 20%
   );
+  position: relative;
 }
 .product h3 {
   font-family: var(--inter);
@@ -54,4 +56,29 @@
   text-decoration: line-through;
   font-size: 1.2rem;
   font-weight: 400;
+}
+.onSale {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.onSale p:nth-child(1) {
+  font-weight: 700;
+  background-color: var(--red);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--white);
+  font-family: var(--gothic);
+}
+
+.onSale p:nth-child(2) {
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--white);
+  font-family: var(--gothic);
+  border: 1px solid var(--red);
 }

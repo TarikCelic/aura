@@ -3,6 +3,17 @@ import cart from "../../assets/icons/cart.svg";
 export default function ProductCard({ product }) {
   return (
     <div className={style.product}>
+      {product.onSale && (
+        <div className={style.onSale}>
+          <p>ON SALE !</p>
+          <p>
+            {Math.round(
+              ((product.price - product.salePrice) / product.price) * 100,
+            )}{" "}
+            %
+          </p>
+        </div>
+      )}
       <img src={product.image} alt="" />
       <h3>{product.name}</h3>
       <p>{product.shortDesc}</p>
@@ -28,7 +39,7 @@ export default function ProductCard({ product }) {
           )}
         </div>
         <div className={style.cart}>
-          <img src={cart} width={23} alt="" />
+          <img src={cart} width={25} alt="" />
         </div>
       </div>
     </div>
