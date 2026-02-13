@@ -62,11 +62,6 @@ const filterOptions = [
         opcije: laptopFilters.storage,
       },
       {
-        choosen: "mb",
-        labelF: "Maticna",
-        opcije: laptopFilters.maticne,
-      },
-      {
         choosen: "sys",
         labelF: "Sistem",
         opcije: laptopFilters.sistem,
