@@ -1,12 +1,12 @@
-import style from "./OnSale.module.css";
-import dLaptop from "../../assets/images/3d-laptop.png";
-import { Link } from "react-router-dom";
-import { useRef } from "react";
-import leftIcon from "../../assets/icons/left-arrow.svg";
-import rightIcon from "../../assets/icons/right-arrow.svg";
+import style from './OnSale.module.css';
+import dLaptop from '../../assets/images/3d-laptop.png';
+import { Link } from 'react-router-dom';
+import { useRef } from 'react';
+import leftIcon from '../../assets/icons/left-arrow.svg';
+import rightIcon from '../../assets/icons/right-arrow.svg';
 
-import cart from "../../assets/icons/cart.svg";
-import products from "../../data/products";
+import cart from '../../assets/icons/cart.svg';
+import products from '../../data/products';
 
 export default function OnSale() {
   const scrollRef = useRef(null);
@@ -16,7 +16,7 @@ export default function OnSale() {
       scrollRef.current.scrollBy({
         top: 0,
         left: offset,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -57,7 +57,7 @@ export default function OnSale() {
                 <img src={cart} width={30} alt="" />
               </div>
             </div>
-            <Link to={"#"}>See The Product</Link>
+            <Link to={'#'}>See The Product</Link>
           </div>
         ))}
       </div>

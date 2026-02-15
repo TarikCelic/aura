@@ -73,13 +73,11 @@
   font-size: 1.1rem;
   color: var(--white);
   font-family: var(--gothic);
-  margin-right: -7px;
 }
 
 .onSale p:nth-child(2) {
   font-weight: 700;
   padding: 0.5rem;
-  margin-right: -7px;
   background-color: var(--black);
   font-size: 1.1rem;
   color: var(--white);

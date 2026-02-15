@@ -1,35 +1,35 @@
-import { useParams, useSearchParams } from "react-router-dom";
-import products from "../../data/products";
-import FilterSidebar from "../../components/FilterSidebar/FilterSidebar";
-import ProductCard from "../../components/ProductCard/ProductCard";
-import style from "./Category.module.css";
-import { useState } from "react";
+import { useParams, useSearchParams } from 'react-router-dom';
+import products from '../../data/products';
+import FilterSidebar from '../../components/FilterSidebar/FilterSidebar';
+import ProductCard from '../../components/ProductCard/ProductCard';
+import style from './Category.module.css';
+import { useState } from 'react';
 
-import sort from "../../assets/icons/sort.svg";
-import filter from "../../assets/icons/filter.svg";
+import sort from '../../assets/icons/sort.svg';
+import filter from '../../assets/icons/filter.svg';
 
 export default function CategoryPage() {
   const [filtersOpened, setFilterOpened] = useState(false);
   const { category } = useParams();
   const [searchParams] = useSearchParams();
 
-  const ramFilter = searchParams.get("ram");
-  const cpuFilter = searchParams.get("cpu");
-  const gpuFilter = searchParams.get("gpu");
-  const storageFilter = searchParams.get("storage");
-  const mbFilter = searchParams.get("mb");
-  const sysFilter = searchParams.get("sys");
-  const minPrice = searchParams.get("minPrice");
-  const maxPrice = searchParams.get("maxPrice");
-  const batteryFilter = searchParams.get("battery");
-  const brandFilter = searchParams.get("brand");
-  const displayFilter = searchParams.get("display");
-  const displayTypeFilter = searchParams.get("displayType");
-  const displayRefreshRate = searchParams.get("refresh-rate");
+  const ramFilter = searchParams.get('ram');
+  const cpuFilter = searchParams.get('cpu');
+  const gpuFilter = searchParams.get('gpu');
+  const storageFilter = searchParams.get('storage');
+  const mbFilter = searchParams.get('mb');
+  const sysFilter = searchParams.get('sys');
+  const minPrice = searchParams.get('minPrice');
+  const maxPrice = searchParams.get('maxPrice');
+  const batteryFilter = searchParams.get('battery');
+  const brandFilter = searchParams.get('brand');
+  const displayFilter = searchParams.get('display');
+  const displayTypeFilter = searchParams.get('displayType');
+  const displayRefreshRate = searchParams.get('refresh-rate');
 
-  const resolutionFilter = searchParams.get("resolution");
-  const panelFilter = searchParams.get("panel");
-  const sizeFilter = searchParams.get("size");
+  const resolutionFilter = searchParams.get('resolution');
+  const panelFilter = searchParams.get('panel');
+  const sizeFilter = searchParams.get('size');
 
   const filteredProducts = products.filter((p) => {
     const matchesResolution = resolutionFilter
