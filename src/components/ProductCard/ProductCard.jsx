@@ -1,5 +1,6 @@
 import style from "./ProductCard.module.css";
 import cart from "../../assets/icons/cart.svg";
+import saleSVG from "../../assets/icons/sale.svg";
 export default function ProductCard({ product }) {
   return (
     <div className={style.product}>
@@ -29,7 +30,7 @@ export default function ProductCard({ product }) {
           {product.onSale && (
             <>
               <p>
-                <span className={style.ogPrice}>{product.price}</span>
+                <span className={style.ogPrice}>{product.price} KM</span>
               </p>
               <p>
                 <span className={style.productPrice}>{product.salePrice}</span>{" "}

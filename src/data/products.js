@@ -87,7 +87,7 @@ const products = [
   // RAM MEMORIJE
   {
     id: 3,
-    name: "Corsair Vengeance DDR5 32GB (2x16GB) 6000MHz",
+    name: "Corsair Vengeance (2x16GB)",
     category: "ram",
     brand: "Corsair",
     price: 299.99,
@@ -113,7 +113,7 @@ const products = [
   },
   {
     id: 4,
-    name: "G.Skill Trident Z5 RGB 64GB (2x32GB) 6400MHz",
+    name: "Trident Z5 RGB (2x32GB)",
     category: "ram",
     brand: "G.Skill",
     price: 549.99,
@@ -463,7 +463,7 @@ const products = [
   // MOBILNI TELEFONI
   {
     id: 16,
-    name: "Samsung Galaxy S24 Ultra 256GB",
+    name: "Samsung Galaxy S24 Ultra",
     category: "phone",
     brand: "Samsung",
     price: 2699.99,
@@ -493,7 +493,7 @@ const products = [
   },
   {
     id: 17,
-    name: "iPhone 15 Pro Max 256GB",
+    name: "iPhone 15 Pro Max",
     category: "phone",
     brand: "Apple",
     price: 2999.99,
@@ -525,7 +525,7 @@ const products = [
   // PERIFERIJE - TASTATURE
   {
     id: 18,
-    name: "Keychron Q1 Pro Mechanical Keyboard",
+    name: "Keychron Q1 Pro",
     category: "keyboard",
     brand: "Keychron",
     price: 449.99,
@@ -720,7 +720,7 @@ const products = [
   // gejmings
   {
     id: 25,
-    name: "Gaming PC - RTX 4070 Ti Super Build",
+    name: "RTX 4070 Ti Super Build",
     category: "desktop",
     brand: "Custom Build",
     price: 4299.99,
@@ -750,7 +750,7 @@ const products = [
   },
   {
     id: 99,
-    name: "Gaming PC - RTX 3050 Intel I7 17719F",
+    name: "RTX 3050 Intel I7 17719F",
     category: "desktop",
     brand: "Custom Build",
     price: 1299.99,
@@ -892,7 +892,7 @@ const products = [
   // RAM MEMORIJE - Dodatne
   {
     id: 36,
-    name: "Kingston Fury Beast DDR5 32GB 5600MHz",
+    name: "Kingston Fury Beast 32GB",
     category: "ram",
     brand: "Kingston",
     price: 249.99,

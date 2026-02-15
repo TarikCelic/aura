@@ -29,11 +29,11 @@
   justify-content: center;
   border: 1px solid #202020;
   border-radius: 7px;
-  background: #400909;
+  background: #241313;
   background: linear-gradient(
     0deg,
-    rgba(64, 9, 9, 1) 0%,
-    rgba(54, 44, 31, 0) 20%
+    rgba(36, 19, 19, 1) 0%,
+    rgba(237, 221, 83, 0) 20%
   );
   position: relative;
 }
@@ -67,18 +67,26 @@
 }
 .onSale p:nth-child(1) {
   font-weight: 700;
+  border: 1px solid var(--red);
   background-color: var(--red);
   padding: 0.5rem;
   font-size: 1.1rem;
   color: var(--white);
   font-family: var(--gothic);
+  margin-right: -7px;
 }
 
 .onSale p:nth-child(2) {
   font-weight: 700;
   padding: 0.5rem;
+  margin-right: -7px;
+  background-color: var(--black);
   font-size: 1.1rem;
   color: var(--white);
   font-family: var(--gothic);
   border: 1px solid var(--red);
+  display: flex;
+  justify-content: center;
+  border-top: none;
+  align-items: center;
 }
